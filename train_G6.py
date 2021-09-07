@@ -1,15 +1,29 @@
-# To add a new cell, type '# %%'
-# To add a new markdown cell, type '# %% [markdown]'
-# %%
-from IPython import get_ipython
-
-# %%
 from pathlib import Path
 import os
 import pickle
 from G6_iris_recognition.feature_vec import engroup
 import cv2 as cv
-import matplotlib.pyplot as plt
+import numpy as np
+
+"""
+# Template for adding new cleanup methods.
+def generic_cleanup(path_to_image, path_to_save_output):
+    success = True
+    try:
+        # Read
+        img = cv.imread(path_to_image, cv.IMREAD_GRAYSCALE)
+        # Transform
+        processed_img = img.copy() # Example, useless
+        # Write
+        cv.imwrite(path_to_save_output, processed_img)
+    except:
+        # Handle failure
+        print(f"")
+        success=False
+    finally:
+        # Return state
+        return success
+"""
 
 def save_model(encodings, names):
     # encodings = lista de listas de encondings gerados com engroup
@@ -46,13 +60,34 @@ def CLAHE_cleanup(path_to_image, path_to_save_output, cL = 30, tGS = (5,5)):
         # Return state
         return success
 
-def generic_cleanup(path_to_image, path_to_save_output):
+def blurMorph_cleanup(path_to_image, path_to_save_output, kernel = np.ones((7,7),np.uint8), gaussBlurSize=(3,3)):
     success = True
     try:
         # Read
         img = cv.imread(path_to_image, cv.IMREAD_GRAYSCALE)
         # Transform
-        processed_img = img.copy() # Example, useless
+        processed_img = cv.GaussianBlur(img,gaussBlurSize,cv.BORDER_DEFAULT)
+        processed_img = cv.morphologyEx(processed_img, cv.MORPH_OPEN, kernel)
+        # Write
+        cv.imwrite(path_to_save_output, processed_img)
+    except:
+        # Handle failure
+        print(f"")
+        success=False
+    finally:
+        # Return state
+        return success
+
+def blurMorphCLAHE_cleanup(path_to_image, path_to_save_output, kernel = np.ones((7,7),np.uint8), gaussBlurSize=(3,3), cL = 30, tGS = (5,5)):
+    success = True
+    try:
+        # Read
+        img = cv.imread(path_to_image, cv.IMREAD_GRAYSCALE)
+        # Transform
+        processed_img = cv.GaussianBlur(img,gaussBlurSize,cv.BORDER_DEFAULT)
+        processed_img = cv.morphologyEx(processed_img, cv.MORPH_OPEN, kernel)
+        clahe = cv.createCLAHE(clipLimit = cL, tileGridSize= tGS)
+        processed_img = clahe.apply(processed_img)
         # Write
         cv.imwrite(path_to_save_output, processed_img)
     except:
@@ -66,7 +101,7 @@ def generic_cleanup(path_to_image, path_to_save_output):
 def main():
     names = []
     all_encodings = []
-    cleanup_options = [CLAHE_cleanup]
+    cleanup_options = [CLAHE_cleanup,blurMorph_cleanup,blurMorphCLAHE_cleanup]
     path_to_tmp_file = "tmp_img.bmp"
     for folder in os.listdir("train"):
         print(f"----\nStarting directory {folder}\n----\n")
@@ -89,10 +124,12 @@ def main():
                         iris_encodings_in_image = engroup(path_to_tmp_file)
                         if iris_encodings_in_image != "invalid image":
                             processed = True
-                            print(f"[SUCCESS] Sucessfully processed {file}")
+                            print(f"[SUCCESS] Sucessfully processed {file} with method {option.__name__}")
                             any_successes_in_folder = True # Alguma íris dessa pasta deu certo então
                             current_encodings.append(iris_encodings_in_image)
             else:
+                processed = True
+                print(f"[SUCCESS] Sucessfully processed {file} with standard image")
                 current_encodings.append(iris_encodings_in_image)                            
             if not processed:
                 print(f"[FAIL] Unable to process {file}")
