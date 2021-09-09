@@ -4,3 +4,5 @@ processedTraining
 test
 train
 subset
+tmp_img.bmp
+.ipynb_checkpoints
