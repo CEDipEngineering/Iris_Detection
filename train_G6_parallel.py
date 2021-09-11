@@ -6,6 +6,7 @@ from G6_iris_recognition.feature_vec import engroup
 import cv2 as cv
 import numpy as np
 import multiprocessing as mp
+import time
 
 
     ##=============================================##
@@ -228,7 +229,11 @@ if __name__ == "__main__":
     ##========bugs.python.org/issue38428===========##
     ##=============================================##
     Path("./model.pickle").touch()
+    print(f"Begining processing")
+    start = time.perf_counter()
     main(processes=6)
+    end = time.perf_counter()-start
+    print(f"Finished in {end//60} minutes and {end%60} seconds")
 
 
 
