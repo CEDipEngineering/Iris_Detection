@@ -8,7 +8,6 @@ import numpy as np
 import multiprocessing as mp
 import time
 
-
     ##=============================================##
     ##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
     ##=======THIS WILL CRASH YOUR TERMINAL=========##
@@ -219,8 +218,6 @@ def main(processes=os.cpu_count(), debug = False):
         pool.terminate()
         pool.join()
 
-
-
 if __name__ == "__main__":
     ##=============================================##
     ##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
@@ -238,7 +235,14 @@ if __name__ == "__main__":
 
 
 
-
+"""
+Sharpening
+Filtro de Freq (Fourier)
+Upscaling
+Função de Teste pra testar score
+ROI não ajuda
+Adicionar comentários explicando que estamos usando o engroup e não o model_train do G6
+"""
 
 
 

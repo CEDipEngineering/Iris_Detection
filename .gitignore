@@ -4,5 +4,6 @@ processedTraining
 test
 train
 subset
-tmp_img.bmp
+*.bmp
 .ipynb_checkpoints
+__pycache__
