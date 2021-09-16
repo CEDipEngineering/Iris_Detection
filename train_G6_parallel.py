@@ -44,7 +44,7 @@ def generic_cleanup(path_to_image, path_to_save_output):
 def save_model(encodings, names):
     # encodings = lista de listas de encondings gerados com engroup
     # names = nome referente a cada lista da matriz encodings
-    data = {"encodings": encodings, "names": names}
+    data = {"encodings": encodings[0], "names": names[0]}
     with open("model.pickle", "wb") as f:
         f.write(pickle.dumps(data))
 

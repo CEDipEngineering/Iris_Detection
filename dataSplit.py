@@ -7,11 +7,11 @@ RANDOM_SEED = 42
 
 folders_main = os.listdir("original")
 try:
-    rmtree("./train")
-    rmtree("./test")
+    rmtree("train")
+    rmtree("test")
 finally:
-    os.mkdir("./train")
-    os.mkdir("./test")
+    os.mkdir("train")
+    os.mkdir("test")
 
 # upscaling
 sr = cv.dnn_superres.DnnSuperResImpl_create()
