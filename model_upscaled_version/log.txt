@@ -1,0 +1,1216 @@
+------------------
+Starting directory 0000
+------------------
+[SUCCESS] Sucessfully processed 0000_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0000_019.bmp with standard image
+Folder 0000 finished...
+Apending data...
+15 encodings extracted from 0000
+------------------
+Starting directory 0001
+------------------
+[FAIL] Unable to process 0001_002.bmp
+[FAIL] Unable to process 0001_003.bmp
+[SUCCESS] Sucessfully processed 0001_004.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0001_005.bmp
+[SUCCESS] Sucessfully processed 0001_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0001_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0001_009.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0001_010.bmp
+[FAIL] Unable to process 0001_011.bmp
+[FAIL] Unable to process 0001_012.bmp
+[FAIL] Unable to process 0001_013.bmp
+[SUCCESS] Sucessfully processed 0001_014.bmp with method morphClose_cleanup
+[SUCCESS] Sucessfully processed 0001_016.bmp with standard image
+[FAIL] Unable to process 0001_018.bmp
+[FAIL] Unable to process 0001_019.bmp
+Folder 0001 finished...
+Apending data...
+6 encodings extracted from 0001
+------------------
+Starting directory 0002
+------------------
+[SUCCESS] Sucessfully processed 0002_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0002_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0002_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_014.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0002_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0002_019.bmp with standard image
+Folder 0002 finished...
+Apending data...
+15 encodings extracted from 0002
+------------------
+Starting directory 0003
+------------------
+[FAIL] Unable to process 0003_002.bmp
+[FAIL] Unable to process 0003_003.bmp
+[FAIL] Unable to process 0003_004.bmp
+[FAIL] Unable to process 0003_005.bmp
+[FAIL] Unable to process 0003_006.bmp
+[SUCCESS] Sucessfully processed 0003_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0003_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0003_010.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0003_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0003_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0003_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0003_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0003_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0003_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0003_019.bmp with standard image
+Folder 0003 finished...
+Apending data...
+10 encodings extracted from 0003
+------------------
+Starting directory 0004
+------------------
+[SUCCESS] Sucessfully processed 0004_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0004_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0004_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0004_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0004_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0004_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0004_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0004_010.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0004_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0004_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0004_013.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0004_014.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0004_016.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0004_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0004_019.bmp with method blurMorph_cleanup
+Folder 0004 finished...
+Apending data...
+15 encodings extracted from 0004
+------------------
+Starting directory 0005
+------------------
+[FAIL] Unable to process 0005_002.bmp
+[SUCCESS] Sucessfully processed 0005_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0005_004.bmp with standard image
+[FAIL] Unable to process 0005_005.bmp
+[SUCCESS] Sucessfully processed 0005_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0005_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0005_009.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0005_010.bmp
+[SUCCESS] Sucessfully processed 0005_011.bmp with method morphClose_cleanup
+[FAIL] Unable to process 0005_012.bmp
+[SUCCESS] Sucessfully processed 0005_013.bmp with standard image
+[FAIL] Unable to process 0005_014.bmp
+[SUCCESS] Sucessfully processed 0005_016.bmp with standard image
+[FAIL] Unable to process 0005_018.bmp
+[FAIL] Unable to process 0005_019.bmp
+Folder 0005 finished...
+Apending data...
+8 encodings extracted from 0005
+------------------
+Starting directory 0006
+------------------
+[SUCCESS] Sucessfully processed 0006_002.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0006_003.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0006_004.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0006_005.bmp
+[SUCCESS] Sucessfully processed 0006_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0006_007.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0006_009.bmp
+[SUCCESS] Sucessfully processed 0006_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0006_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0006_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0006_013.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0006_014.bmp
+[FAIL] Unable to process 0006_016.bmp
+[SUCCESS] Sucessfully processed 0006_018.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0006_019.bmp
+Folder 0006 finished...
+Apending data...
+10 encodings extracted from 0006
+------------------
+Starting directory 0007
+------------------
+[SUCCESS] Sucessfully processed 0007_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0007_003.bmp with standard image
+[FAIL] Unable to process 0007_004.bmp
+[FAIL] Unable to process 0007_006.bmp
+[FAIL] Unable to process 0007_008.bmp
+[FAIL] Unable to process 0007_009.bmp
+[FAIL] Unable to process 0007_010.bmp
+[SUCCESS] Sucessfully processed 0007_011.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0007_015.bmp
+[FAIL] Unable to process 0007_016.bmp
+[FAIL] Unable to process 0007_017.bmp
+[SUCCESS] Sucessfully processed 0007_019.bmp with method blurMorph_cleanup
+Folder 0007 finished...
+Apending data...
+4 encodings extracted from 0007
+------------------
+Starting directory 0008
+------------------
+[SUCCESS] Sucessfully processed 0008_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_015.bmp with standard image
+[SUCCESS] Sucessfully processed 0008_017.bmp with standard image
+Folder 0008 finished...
+Apending data...
+12 encodings extracted from 0008
+------------------
+Starting directory 0009
+------------------
+[SUCCESS] Sucessfully processed 0009_005.bmp with standard image
+[FAIL] Unable to process 0009_006.bmp
+[SUCCESS] Sucessfully processed 0009_007.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0009_008.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0009_009.bmp
+[SUCCESS] Sucessfully processed 0009_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0009_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0009_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0009_019.bmp with method blurMorph_cleanup
+Folder 0009 finished...
+Apending data...
+7 encodings extracted from 0009
+------------------
+Starting directory 0010
+------------------
+[SUCCESS] Sucessfully processed 0010_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0010_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0010_019.bmp with standard image
+Folder 0010 finished...
+Apending data...
+15 encodings extracted from 0010
+------------------
+Starting directory 0011
+------------------
+[SUCCESS] Sucessfully processed 0011_002.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0011_003.bmp
+[FAIL] Unable to process 0011_004.bmp
+[FAIL] Unable to process 0011_005.bmp
+[FAIL] Unable to process 0011_006.bmp
+[FAIL] Unable to process 0011_007.bmp
+[FAIL] Unable to process 0011_009.bmp
+[SUCCESS] Sucessfully processed 0011_010.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0011_011.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0011_012.bmp
+[FAIL] Unable to process 0011_013.bmp
+[SUCCESS] Sucessfully processed 0011_014.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0011_016.bmp
+[FAIL] Unable to process 0011_018.bmp
+[FAIL] Unable to process 0011_019.bmp
+Folder 0011 finished...
+Apending data...
+4 encodings extracted from 0011
+------------------
+Starting directory 0013
+------------------
+[SUCCESS] Sucessfully processed 0013_002.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0013_003.bmp
+[FAIL] Unable to process 0013_004.bmp
+[FAIL] Unable to process 0013_005.bmp
+[FAIL] Unable to process 0013_006.bmp
+[FAIL] Unable to process 0013_007.bmp
+[SUCCESS] Sucessfully processed 0013_009.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0013_010.bmp
+[SUCCESS] Sucessfully processed 0013_011.bmp with standard image
+[FAIL] Unable to process 0013_012.bmp
+[SUCCESS] Sucessfully processed 0013_013.bmp with standard image
+[FAIL] Unable to process 0013_014.bmp
+[FAIL] Unable to process 0013_016.bmp
+[FAIL] Unable to process 0013_018.bmp
+[FAIL] Unable to process 0013_019.bmp
+Folder 0013 finished...
+Apending data...
+4 encodings extracted from 0013
+------------------
+Starting directory 0014
+------------------
+[SUCCESS] Sucessfully processed 0014_002.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0014_003.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0014_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0014_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0014_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0014_007.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0014_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0014_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0014_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0014_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0014_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0014_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0014_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0014_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0014_019.bmp with standard image
+Folder 0014 finished...
+Apending data...
+15 encodings extracted from 0014
+------------------
+Starting directory 0015
+------------------
+[FAIL] Unable to process 0015_002.bmp
+[SUCCESS] Sucessfully processed 0015_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0015_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0015_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0015_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0015_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0015_009.bmp with standard image
+[FAIL] Unable to process 0015_010.bmp
+[FAIL] Unable to process 0015_011.bmp
+[FAIL] Unable to process 0015_012.bmp
+[FAIL] Unable to process 0015_013.bmp
+[FAIL] Unable to process 0015_014.bmp
+[FAIL] Unable to process 0015_016.bmp
+[FAIL] Unable to process 0015_018.bmp
+[FAIL] Unable to process 0015_019.bmp
+Folder 0015 finished...
+Apending data...
+6 encodings extracted from 0015
+------------------
+Starting directory 0016
+------------------
+[SUCCESS] Sucessfully processed 0016_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0016_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0016_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0016_019.bmp with standard image
+Folder 0016 finished...
+Apending data...
+15 encodings extracted from 0016
+------------------
+Starting directory 0017
+------------------
+[SUCCESS] Sucessfully processed 0017_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_014.bmp with standard image
+[FAIL] Unable to process 0017_016.bmp
+[SUCCESS] Sucessfully processed 0017_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0017_019.bmp with standard image
+Folder 0017 finished...
+Apending data...
+14 encodings extracted from 0017
+------------------
+Starting directory 0018
+------------------
+[SUCCESS] Sucessfully processed 0018_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0018_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0018_007.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0018_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0018_018.bmp with method morphClose_cleanup
+[SUCCESS] Sucessfully processed 0018_019.bmp with standard image
+Folder 0018 finished...
+Apending data...
+15 encodings extracted from 0018
+------------------
+Starting directory 0019
+------------------
+[FAIL] Unable to process 0019_002.bmp
+[SUCCESS] Sucessfully processed 0019_003.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0019_004.bmp
+[SUCCESS] Sucessfully processed 0019_005.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0019_006.bmp
+[FAIL] Unable to process 0019_007.bmp
+[SUCCESS] Sucessfully processed 0019_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0019_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0019_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0019_012.bmp with method morphClose_cleanup
+[SUCCESS] Sucessfully processed 0019_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0019_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0019_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0019_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0019_019.bmp with standard image
+Folder 0019 finished...
+Apending data...
+11 encodings extracted from 0019
+------------------
+Starting directory 0020
+------------------
+[SUCCESS] Sucessfully processed 0020_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0020_019.bmp with standard image
+Folder 0020 finished...
+Apending data...
+15 encodings extracted from 0020
+------------------
+Starting directory 0021
+------------------
+[SUCCESS] Sucessfully processed 0021_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_008.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_015.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_017.bmp with standard image
+[SUCCESS] Sucessfully processed 0021_019.bmp with standard image
+Folder 0021 finished...
+Apending data...
+12 encodings extracted from 0021
+------------------
+Starting directory 0022
+------------------
+[SUCCESS] Sucessfully processed 0022_002.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0022_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0022_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0022_008.bmp with method medianSlide_cleanup
+[SUCCESS] Sucessfully processed 0022_009.bmp with method medianSlide_cleanup
+[SUCCESS] Sucessfully processed 0022_010.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0022_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0022_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0022_015.bmp with standard image
+[SUCCESS] Sucessfully processed 0022_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0022_017.bmp with standard image
+[SUCCESS] Sucessfully processed 0022_019.bmp with standard image
+Folder 0022 finished...
+Apending data...
+12 encodings extracted from 0022
+------------------
+Starting directory 0023
+------------------
+[SUCCESS] Sucessfully processed 0023_002.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0023_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0023_005.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0023_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0023_008.bmp with standard image
+[SUCCESS] Sucessfully processed 0023_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0023_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0023_011.bmp with standard image
+[FAIL] Unable to process 0023_013.bmp
+[FAIL] Unable to process 0023_014.bmp
+[SUCCESS] Sucessfully processed 0023_015.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0023_019.bmp
+Folder 0023 finished...
+Apending data...
+9 encodings extracted from 0023
+------------------
+Starting directory 0024
+------------------
+[SUCCESS] Sucessfully processed 0024_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0024_003.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0024_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0024_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0024_006.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0024_007.bmp
+[SUCCESS] Sucessfully processed 0024_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0024_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0024_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0024_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0024_013.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0024_014.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0024_016.bmp
+[FAIL] Unable to process 0024_018.bmp
+[FAIL] Unable to process 0024_019.bmp
+Folder 0024 finished...
+Apending data...
+11 encodings extracted from 0024
+------------------
+Starting directory 0025
+------------------
+[FAIL] Unable to process 0025_002.bmp
+[FAIL] Unable to process 0025_003.bmp
+[FAIL] Unable to process 0025_004.bmp
+[FAIL] Unable to process 0025_005.bmp
+[SUCCESS] Sucessfully processed 0025_006.bmp with standard image
+[FAIL] Unable to process 0025_007.bmp
+[FAIL] Unable to process 0025_009.bmp
+[FAIL] Unable to process 0025_010.bmp
+[FAIL] Unable to process 0025_011.bmp
+[FAIL] Unable to process 0025_012.bmp
+[FAIL] Unable to process 0025_013.bmp
+[SUCCESS] Sucessfully processed 0025_014.bmp with standard image
+[FAIL] Unable to process 0025_016.bmp
+[FAIL] Unable to process 0025_018.bmp
+[FAIL] Unable to process 0025_019.bmp
+Folder 0025 finished...
+Apending data...
+2 encodings extracted from 0025
+------------------
+Starting directory 0026
+------------------
+[SUCCESS] Sucessfully processed 0026_002.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0026_003.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0026_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0026_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0026_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0026_007.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0026_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0026_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0026_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0026_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0026_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0026_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0026_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0026_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0026_019.bmp with standard image
+Folder 0026 finished...
+Apending data...
+15 encodings extracted from 0026
+------------------
+Starting directory 0027
+------------------
+[FAIL] Unable to process 0027_002.bmp
+[FAIL] Unable to process 0027_003.bmp
+[FAIL] Unable to process 0027_004.bmp
+[SUCCESS] Sucessfully processed 0027_005.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0027_006.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0027_007.bmp
+[FAIL] Unable to process 0027_009.bmp
+[FAIL] Unable to process 0027_010.bmp
+[FAIL] Unable to process 0027_011.bmp
+[SUCCESS] Sucessfully processed 0027_012.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0027_013.bmp
+[FAIL] Unable to process 0027_014.bmp
+[SUCCESS] Sucessfully processed 0027_016.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0027_018.bmp
+[FAIL] Unable to process 0027_019.bmp
+Folder 0027 finished...
+Apending data...
+4 encodings extracted from 0027
+------------------
+Starting directory 0028
+------------------
+[SUCCESS] Sucessfully processed 0028_002.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0028_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0028_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_007.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_009.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0028_010.bmp
+[SUCCESS] Sucessfully processed 0028_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_013.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_014.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_016.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0028_019.bmp with method blurMorph_cleanup
+Folder 0028 finished...
+Apending data...
+14 encodings extracted from 0028
+------------------
+Starting directory 0029
+------------------
+[FAIL] Unable to process 0029_002.bmp
+[FAIL] Unable to process 0029_003.bmp
+[SUCCESS] Sucessfully processed 0029_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0029_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0029_006.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0029_007.bmp
+[SUCCESS] Sucessfully processed 0029_009.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0029_010.bmp
+[FAIL] Unable to process 0029_011.bmp
+[FAIL] Unable to process 0029_012.bmp
+[FAIL] Unable to process 0029_013.bmp
+[FAIL] Unable to process 0029_014.bmp
+[FAIL] Unable to process 0029_016.bmp
+[SUCCESS] Sucessfully processed 0029_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0029_019.bmp with method blurMorph_cleanup
+Folder 0029 finished...
+Apending data...
+6 encodings extracted from 0029
+------------------
+Starting directory 0030
+------------------
+[SUCCESS] Sucessfully processed 0030_002.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0030_003.bmp
+[SUCCESS] Sucessfully processed 0030_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0030_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0030_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0030_019.bmp with method blurMorph_cleanup
+Folder 0030 finished...
+Apending data...
+14 encodings extracted from 0030
+------------------
+Starting directory 0031
+------------------
+[FAIL] Unable to process 0031_002.bmp
+[FAIL] Unable to process 0031_003.bmp
+[FAIL] Unable to process 0031_004.bmp
+[FAIL] Unable to process 0031_005.bmp
+[FAIL] Unable to process 0031_006.bmp
+[FAIL] Unable to process 0031_007.bmp
+[FAIL] Unable to process 0031_009.bmp
+[FAIL] Unable to process 0031_010.bmp
+[FAIL] Unable to process 0031_011.bmp
+[FAIL] Unable to process 0031_012.bmp
+[SUCCESS] Sucessfully processed 0031_013.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0031_014.bmp
+[FAIL] Unable to process 0031_016.bmp
+[SUCCESS] Sucessfully processed 0031_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0031_019.bmp with method medianSlide_cleanup
+Folder 0031 finished...
+Apending data...
+3 encodings extracted from 0031
+------------------
+Starting directory 0032
+------------------
+[SUCCESS] Sucessfully processed 0032_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0032_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0032_014.bmp with standard image
+[FAIL] Unable to process 0032_016.bmp
+[SUCCESS] Sucessfully processed 0032_018.bmp with method medianSlide_cleanup
+[SUCCESS] Sucessfully processed 0032_019.bmp with method blurMorph_cleanup
+Folder 0032 finished...
+Apending data...
+14 encodings extracted from 0032
+------------------
+Starting directory 0033
+------------------
+[FAIL] Unable to process 0033_002.bmp
+[FAIL] Unable to process 0033_003.bmp
+[FAIL] Unable to process 0033_004.bmp
+[FAIL] Unable to process 0033_005.bmp
+[SUCCESS] Sucessfully processed 0033_006.bmp with standard image
+[FAIL] Unable to process 0033_007.bmp
+[FAIL] Unable to process 0033_009.bmp
+[FAIL] Unable to process 0033_010.bmp
+[SUCCESS] Sucessfully processed 0033_011.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0033_012.bmp
+[FAIL] Unable to process 0033_013.bmp
+[FAIL] Unable to process 0033_014.bmp
+[FAIL] Unable to process 0033_016.bmp
+[FAIL] Unable to process 0033_018.bmp
+[FAIL] Unable to process 0033_019.bmp
+Folder 0033 finished...
+Apending data...
+2 encodings extracted from 0033
+------------------
+Starting directory 0034
+------------------
+[SUCCESS] Sucessfully processed 0034_002.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0034_003.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0034_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0034_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0034_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0034_019.bmp with standard image
+Folder 0034 finished...
+Apending data...
+15 encodings extracted from 0034
+------------------
+Starting directory 0035
+------------------
+[SUCCESS] Sucessfully processed 0035_002.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0035_003.bmp
+[FAIL] Unable to process 0035_004.bmp
+[SUCCESS] Sucessfully processed 0035_005.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0035_006.bmp with method medianSlide_cleanup
+[SUCCESS] Sucessfully processed 0035_007.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0035_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0035_010.bmp with standard image
+[FAIL] Unable to process 0035_011.bmp
+[SUCCESS] Sucessfully processed 0035_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0035_013.bmp with standard image
+[FAIL] Unable to process 0035_014.bmp
+[SUCCESS] Sucessfully processed 0035_016.bmp with standard image
+[FAIL] Unable to process 0035_018.bmp
+[SUCCESS] Sucessfully processed 0035_019.bmp with standard image
+Folder 0035 finished...
+Apending data...
+10 encodings extracted from 0035
+------------------
+Starting directory 0036
+------------------
+[SUCCESS] Sucessfully processed 0036_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0036_019.bmp with standard image
+Folder 0036 finished...
+Apending data...
+15 encodings extracted from 0036
+------------------
+Starting directory 0037
+------------------
+[FAIL] Unable to process 0037_002.bmp
+[SUCCESS] Sucessfully processed 0037_003.bmp with standard image
+[FAIL] Unable to process 0037_004.bmp
+[FAIL] Unable to process 0037_005.bmp
+[FAIL] Unable to process 0037_006.bmp
+[FAIL] Unable to process 0037_007.bmp
+[FAIL] Unable to process 0037_009.bmp
+[FAIL] Unable to process 0037_010.bmp
+[SUCCESS] Sucessfully processed 0037_011.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0037_012.bmp
+[FAIL] Unable to process 0037_013.bmp
+[FAIL] Unable to process 0037_014.bmp
+[SUCCESS] Sucessfully processed 0037_016.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0037_018.bmp
+[FAIL] Unable to process 0037_019.bmp
+Folder 0037 finished...
+Apending data...
+3 encodings extracted from 0037
+------------------
+Starting directory 0038
+------------------
+[SUCCESS] Sucessfully processed 0038_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0038_019.bmp with standard image
+Folder 0038 finished...
+Apending data...
+15 encodings extracted from 0038
+------------------
+Starting directory 0039
+------------------
+[FAIL] Unable to process 0039_002.bmp
+[FAIL] Unable to process 0039_003.bmp
+[FAIL] Unable to process 0039_004.bmp
+[FAIL] Unable to process 0039_005.bmp
+[FAIL] Unable to process 0039_006.bmp
+[FAIL] Unable to process 0039_007.bmp
+[FAIL] Unable to process 0039_009.bmp
+[FAIL] Unable to process 0039_010.bmp
+[FAIL] Unable to process 0039_011.bmp
+[FAIL] Unable to process 0039_012.bmp
+[FAIL] Unable to process 0039_013.bmp
+[FAIL] Unable to process 0039_014.bmp
+[FAIL] Unable to process 0039_016.bmp
+[SUCCESS] Sucessfully processed 0039_018.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0039_019.bmp
+Folder 0039 finished...
+Apending data...
+1 encodings extracted from 0039
+------------------
+Starting directory 0040
+------------------
+[SUCCESS] Sucessfully processed 0040_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_003.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0040_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0040_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0040_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_012.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0040_013.bmp with standard image
+[FAIL] Unable to process 0040_014.bmp
+[SUCCESS] Sucessfully processed 0040_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0040_019.bmp with standard image
+Folder 0040 finished...
+Apending data...
+14 encodings extracted from 0040
+------------------
+Starting directory 0041
+------------------
+[FAIL] Unable to process 0041_002.bmp
+[FAIL] Unable to process 0041_003.bmp
+[FAIL] Unable to process 0041_004.bmp
+[FAIL] Unable to process 0041_005.bmp
+[FAIL] Unable to process 0041_006.bmp
+[FAIL] Unable to process 0041_007.bmp
+[FAIL] Unable to process 0041_009.bmp
+[FAIL] Unable to process 0041_010.bmp
+[FAIL] Unable to process 0041_011.bmp
+[FAIL] Unable to process 0041_012.bmp
+[FAIL] Unable to process 0041_013.bmp
+[FAIL] Unable to process 0041_014.bmp
+[FAIL] Unable to process 0041_016.bmp
+[FAIL] Unable to process 0041_018.bmp
+[FAIL] Unable to process 0041_019.bmp
+Folder 0041 finished...
+Unable to extract any information from folder...
+------------------
+Starting directory 0042
+------------------
+[SUCCESS] Sucessfully processed 0042_002.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0042_003.bmp
+[SUCCESS] Sucessfully processed 0042_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0042_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0042_006.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0042_007.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0042_009.bmp
+[FAIL] Unable to process 0042_010.bmp
+[SUCCESS] Sucessfully processed 0042_011.bmp with standard image
+[FAIL] Unable to process 0042_012.bmp
+[FAIL] Unable to process 0042_013.bmp
+[FAIL] Unable to process 0042_014.bmp
+[FAIL] Unable to process 0042_016.bmp
+[FAIL] Unable to process 0042_018.bmp
+[FAIL] Unable to process 0042_019.bmp
+Folder 0042 finished...
+Apending data...
+6 encodings extracted from 0042
+------------------
+Starting directory 0043
+------------------
+[SUCCESS] Sucessfully processed 0043_002.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0043_003.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0043_004.bmp
+[FAIL] Unable to process 0043_005.bmp
+[FAIL] Unable to process 0043_006.bmp
+[FAIL] Unable to process 0043_007.bmp
+[FAIL] Unable to process 0043_009.bmp
+[SUCCESS] Sucessfully processed 0043_010.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0043_011.bmp
+[FAIL] Unable to process 0043_012.bmp
+[SUCCESS] Sucessfully processed 0043_013.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0043_014.bmp
+[FAIL] Unable to process 0043_016.bmp
+[FAIL] Unable to process 0043_018.bmp
+[FAIL] Unable to process 0043_019.bmp
+Folder 0043 finished...
+Apending data...
+4 encodings extracted from 0043
+------------------
+Starting directory 0044
+------------------
+[SUCCESS] Sucessfully processed 0044_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0044_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0044_019.bmp with standard image
+Folder 0044 finished...
+Apending data...
+15 encodings extracted from 0044
+------------------
+Starting directory 0045
+------------------
+[FAIL] Unable to process 0045_002.bmp
+[FAIL] Unable to process 0045_003.bmp
+[FAIL] Unable to process 0045_004.bmp
+[FAIL] Unable to process 0045_005.bmp
+[SUCCESS] Sucessfully processed 0045_006.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0045_007.bmp
+[FAIL] Unable to process 0045_009.bmp
+[FAIL] Unable to process 0045_010.bmp
+[SUCCESS] Sucessfully processed 0045_011.bmp with method medianSlide_cleanup
+[SUCCESS] Sucessfully processed 0045_012.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0045_013.bmp
+[FAIL] Unable to process 0045_014.bmp
+[FAIL] Unable to process 0045_016.bmp
+[FAIL] Unable to process 0045_018.bmp
+[FAIL] Unable to process 0045_019.bmp
+Folder 0045 finished...
+Apending data...
+3 encodings extracted from 0045
+------------------
+Starting directory 0046
+------------------
+[SUCCESS] Sucessfully processed 0046_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0046_003.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0046_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0046_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0046_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0046_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0046_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0046_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0046_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0046_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0046_013.bmp with method morphClose_cleanup
+[SUCCESS] Sucessfully processed 0046_014.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0046_016.bmp with method medianSlide_cleanup
+[SUCCESS] Sucessfully processed 0046_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0046_019.bmp with method blurMorph_cleanup
+Folder 0046 finished...
+Apending data...
+15 encodings extracted from 0046
+------------------
+Starting directory 0047
+------------------
+[FAIL] Unable to process 0047_002.bmp
+[FAIL] Unable to process 0047_003.bmp
+[FAIL] Unable to process 0047_004.bmp
+[FAIL] Unable to process 0047_005.bmp
+[FAIL] Unable to process 0047_006.bmp
+[FAIL] Unable to process 0047_007.bmp
+[FAIL] Unable to process 0047_009.bmp
+[SUCCESS] Sucessfully processed 0047_010.bmp with method medianSlide_cleanup
+[SUCCESS] Sucessfully processed 0047_011.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0047_012.bmp
+[FAIL] Unable to process 0047_013.bmp
+[FAIL] Unable to process 0047_014.bmp
+[FAIL] Unable to process 0047_016.bmp
+[SUCCESS] Sucessfully processed 0047_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0047_019.bmp with method medianSlide_cleanup
+Folder 0047 finished...
+Apending data...
+4 encodings extracted from 0047
+------------------
+Starting directory 0048
+------------------
+[SUCCESS] Sucessfully processed 0048_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0048_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0048_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0048_005.bmp with standard image
+[FAIL] Unable to process 0048_006.bmp
+[SUCCESS] Sucessfully processed 0048_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0048_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0048_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0048_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0048_012.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0048_013.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0048_014.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0048_016.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0048_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0048_019.bmp with standard image
+Folder 0048 finished...
+Apending data...
+14 encodings extracted from 0048
+------------------
+Starting directory 0049
+------------------
+[FAIL] Unable to process 0049_002.bmp
+[FAIL] Unable to process 0049_003.bmp
+[FAIL] Unable to process 0049_004.bmp
+[FAIL] Unable to process 0049_005.bmp
+[FAIL] Unable to process 0049_006.bmp
+[FAIL] Unable to process 0049_007.bmp
+[FAIL] Unable to process 0049_009.bmp
+[FAIL] Unable to process 0049_010.bmp
+[FAIL] Unable to process 0049_011.bmp
+[FAIL] Unable to process 0049_012.bmp
+[SUCCESS] Sucessfully processed 0049_013.bmp with standard image
+[FAIL] Unable to process 0049_014.bmp
+[FAIL] Unable to process 0049_016.bmp
+[FAIL] Unable to process 0049_018.bmp
+[FAIL] Unable to process 0049_019.bmp
+Folder 0049 finished...
+Apending data...
+1 encodings extracted from 0049
+------------------
+Starting directory 0050
+------------------
+[SUCCESS] Sucessfully processed 0050_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0050_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0050_019.bmp with standard image
+Folder 0050 finished...
+Apending data...
+15 encodings extracted from 0050
+------------------
+Starting directory 0051
+------------------
+[FAIL] Unable to process 0051_002.bmp
+[FAIL] Unable to process 0051_003.bmp
+[FAIL] Unable to process 0051_004.bmp
+[FAIL] Unable to process 0051_005.bmp
+[FAIL] Unable to process 0051_006.bmp
+[FAIL] Unable to process 0051_007.bmp
+[FAIL] Unable to process 0051_009.bmp
+[FAIL] Unable to process 0051_010.bmp
+[FAIL] Unable to process 0051_011.bmp
+[FAIL] Unable to process 0051_012.bmp
+[FAIL] Unable to process 0051_013.bmp
+[FAIL] Unable to process 0051_014.bmp
+[FAIL] Unable to process 0051_016.bmp
+[FAIL] Unable to process 0051_018.bmp
+[FAIL] Unable to process 0051_019.bmp
+Folder 0051 finished...
+Unable to extract any information from folder...
+------------------
+Starting directory 0052
+------------------
+[SUCCESS] Sucessfully processed 0052_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0052_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_013.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0052_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_016.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0052_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0052_019.bmp with standard image
+Folder 0052 finished...
+Apending data...
+15 encodings extracted from 0052
+------------------
+Starting directory 0053
+------------------
+[FAIL] Unable to process 0053_002.bmp
+[FAIL] Unable to process 0053_003.bmp
+[SUCCESS] Sucessfully processed 0053_004.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0053_005.bmp
+[FAIL] Unable to process 0053_006.bmp
+[SUCCESS] Sucessfully processed 0053_007.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0053_009.bmp
+[FAIL] Unable to process 0053_010.bmp
+[FAIL] Unable to process 0053_011.bmp
+[SUCCESS] Sucessfully processed 0053_012.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0053_013.bmp
+[FAIL] Unable to process 0053_014.bmp
+[SUCCESS] Sucessfully processed 0053_016.bmp with standard image
+[FAIL] Unable to process 0053_018.bmp
+[SUCCESS] Sucessfully processed 0053_019.bmp with method CLAHE_cleanup
+Folder 0053 finished...
+Apending data...
+5 encodings extracted from 0053
+------------------
+Starting directory 0054
+------------------
+[SUCCESS] Sucessfully processed 0054_002.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0054_003.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0054_004.bmp
+[FAIL] Unable to process 0054_005.bmp
+[FAIL] Unable to process 0054_006.bmp
+[FAIL] Unable to process 0054_007.bmp
+[FAIL] Unable to process 0054_009.bmp
+[SUCCESS] Sucessfully processed 0054_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0054_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0054_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0054_013.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0054_014.bmp with standard image
+[SUCCESS] Sucessfully processed 0054_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0054_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0054_019.bmp with standard image
+Folder 0054 finished...
+Apending data...
+10 encodings extracted from 0054
+------------------
+Starting directory 0055
+------------------
+[FAIL] Unable to process 0055_002.bmp
+[FAIL] Unable to process 0055_003.bmp
+[FAIL] Unable to process 0055_004.bmp
+[SUCCESS] Sucessfully processed 0055_005.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0055_006.bmp
+[FAIL] Unable to process 0055_007.bmp
+[FAIL] Unable to process 0055_009.bmp
+[FAIL] Unable to process 0055_010.bmp
+[FAIL] Unable to process 0055_011.bmp
+[FAIL] Unable to process 0055_012.bmp
+[FAIL] Unable to process 0055_013.bmp
+[FAIL] Unable to process 0055_014.bmp
+[SUCCESS] Sucessfully processed 0055_016.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0055_018.bmp with method CLAHE_cleanup
+[SUCCESS] Sucessfully processed 0055_019.bmp with method CLAHE_cleanup
+Folder 0055 finished...
+Apending data...
+4 encodings extracted from 0055
+------------------
+Starting directory 0056
+------------------
+[SUCCESS] Sucessfully processed 0056_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_004.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_006.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_009.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0056_011.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0056_012.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0056_013.bmp
+[FAIL] Unable to process 0056_014.bmp
+[SUCCESS] Sucessfully processed 0056_016.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0056_018.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0056_019.bmp with method blurMorph_cleanup
+Folder 0056 finished...
+Apending data...
+13 encodings extracted from 0056
+------------------
+Starting directory 0057
+------------------
+[SUCCESS] Sucessfully processed 0057_002.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0057_003.bmp with method medianSlide_cleanup
+[FAIL] Unable to process 0057_004.bmp
+[FAIL] Unable to process 0057_005.bmp
+[FAIL] Unable to process 0057_006.bmp
+[SUCCESS] Sucessfully processed 0057_007.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0057_009.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0057_010.bmp
+[FAIL] Unable to process 0057_011.bmp
+[FAIL] Unable to process 0057_012.bmp
+[FAIL] Unable to process 0057_013.bmp
+[FAIL] Unable to process 0057_014.bmp
+[SUCCESS] Sucessfully processed 0057_016.bmp with standard image
+[FAIL] Unable to process 0057_018.bmp
+[FAIL] Unable to process 0057_019.bmp
+Folder 0057 finished...
+Apending data...
+5 encodings extracted from 0057
+------------------
+Starting directory 0058
+------------------
+[SUCCESS] Sucessfully processed 0058_002.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_003.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_004.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0058_005.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_006.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0058_007.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_009.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0058_010.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_011.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_012.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_013.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_014.bmp with method blurMorph_cleanup
+[SUCCESS] Sucessfully processed 0058_016.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_018.bmp with standard image
+[SUCCESS] Sucessfully processed 0058_019.bmp with standard image
+Folder 0058 finished...
+Apending data...
+15 encodings extracted from 0058
+------------------
+Starting directory 0059
+------------------
+[FAIL] Unable to process 0059_002.bmp
+[SUCCESS] Sucessfully processed 0059_003.bmp with method CLAHE_cleanup
+[FAIL] Unable to process 0059_004.bmp
+[SUCCESS] Sucessfully processed 0059_005.bmp with method blurMorph_cleanup
+[FAIL] Unable to process 0059_006.bmp
+[SUCCESS] Sucessfully processed 0059_007.bmp with standard image
+[FAIL] Unable to process 0059_009.bmp
+[FAIL] Unable to process 0059_010.bmp
+[SUCCESS] Sucessfully processed 0059_011.bmp with standard image
+[FAIL] Unable to process 0059_012.bmp
+[FAIL] Unable to process 0059_013.bmp
+[FAIL] Unable to process 0059_014.bmp
+[SUCCESS] Sucessfully processed 0059_016.bmp with standard image
+[FAIL] Unable to process 0059_018.bmp
+[FAIL] Unable to process 0059_019.bmp
+Folder 0059 finished...
+Apending data...
+5 encodings extracted from 0059

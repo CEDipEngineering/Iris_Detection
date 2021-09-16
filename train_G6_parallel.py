@@ -4,9 +4,14 @@ import os
 import pickle
 from G6_iris_recognition.feature_vec import engroup
 import cv2 as cv
+from cv2 import dnn_superres
 import numpy as np
 import multiprocessing as mp
 import time
+
+## O treinamento foi feito usando o método engroup do G6, e não o iris_model_train, como sugerido.
+## As imagens são ampliadas usando o modelo FSRCNN-small_x3, que é uma rede Neural de Upscaling do OpenCV
+
 
     ##=============================================##
     ##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
@@ -136,14 +141,14 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
     train_log_csv = []
     
     ## Processing
-    # print(f"----\nStarting directory {folder}\n----\n")
+    print(f"----\nStarting directory {folder}\n----\n")
     log += f"------------------\nStarting directory {folder}\n------------------\n"
     current_encodings = []
     any_successes_in_folder = False
     for file in os.listdir(f"train/{folder}"):
         processed=False
         ## Tentando imagem original, e se não der, tentar imagem processada
-        path_to_image=f"train/{folder}/{file}"
+        path_to_image=f"train/{folder}/{file}"   
         iris_encodings_in_image = engroup(path_to_image)
         if iris_encodings_in_image == "invalid image":
             # Tentar todas as opções
@@ -170,8 +175,7 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
         if not processed:
             # print(f"[FAIL] Unable to process {file}")
             log += f"[FAIL] Unable to process {file}\n"
-
-    # print(f"Folder {folder} finished...")
+    print(f"Folder {folder} finished...")
     log += f"Folder {folder} finished...\n"
     if any_successes_in_folder:
         # print(f"Apending data...\n{len(current_encodings)} encodings extracted from {folder}")
@@ -228,7 +232,7 @@ if __name__ == "__main__":
     Path("./model.pickle").touch()
     print(f"Begining processing")
     start = time.perf_counter()
-    main(processes=6)
+    main(processes=4)
     end = time.perf_counter()-start
     print(f"Finished in {end//60} minutes and {end%60} seconds")
 
