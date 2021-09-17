@@ -44,7 +44,7 @@ def generic_cleanup(path_to_image, path_to_save_output):
 def save_model(encodings, names):
     # encodings = lista de listas de encondings gerados com engroup
     # names = nome referente a cada lista da matriz encodings
-    data = {"encodings": encodings[0], "names": names[0]}
+    data = {"encodings": encodings, "names": names}
     with open("model.pickle", "wb") as f:
         f.write(pickle.dumps(data))
 
@@ -135,7 +135,7 @@ def morphClose_cleanup(path_to_image, path_to_save_output, kernel = np.ones((5,5
 
 def process_folder(folder, cleanup_options, path_to_tmp_file):
     ## Output variables
-    names = []
+    names = [""]
     all_encodings = []
     log = ""
     train_log_csv = []
@@ -181,16 +181,17 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
         # print(f"Apending data...\n{len(current_encodings)} encodings extracted from {folder}")
         log += f"Apending data...\n{len(current_encodings)} encodings extracted from {folder}\n"
         # Guardar nome da pasta como label e lista de encodings como features.
-        names.append(folder)
+        names[0] = folder
         all_encodings.append(current_encodings)
     else:
         # print("Unable to extract any information from folder...")
         log += ("Unable to extract any information from folder...\n")
+        all_encodings.append([])
     train_log_csv.append([folder, len(current_encodings)])
     try:
         os.remove(path_to_tmp_file)
     finally:
-        return {"names":names, "all_encodings":all_encodings, "log":log, "train_log_csv":train_log_csv}
+        return {"names":names[0], "all_encodings":all_encodings[0], "log":log, "train_log_csv":train_log_csv}
 
 def main(processes=os.cpu_count(), debug = False):
     names = []
@@ -210,6 +211,7 @@ def main(processes=os.cpu_count(), debug = False):
             these_encodings = person["all_encodings"]
             log += person["log"]
             train_log_csv += person["train_log_csv"]
+            
             if len(these_encodings) != 0:
                 all_encodings.append(these_encodings)
                 names.append(this_name)
@@ -232,7 +234,7 @@ if __name__ == "__main__":
     Path("./model.pickle").touch()
     print(f"Begining processing")
     start = time.perf_counter()
-    main(processes=4)
+    main(processes=7)
     end = time.perf_counter()-start
     print(f"Finished in {end//60} minutes and {end%60} seconds")
 

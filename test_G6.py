@@ -1,7 +1,7 @@
 from G6_iris_recognition import iris_model_test, iris_model_train
 import os
 import pickle
-from train_G6 import blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup, cleanup_wrapper
+from train_G6_parallel import blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup, cleanup_wrapper
 
 
 
@@ -15,7 +15,7 @@ for folder in os.listdir(f"test/"):
     current_encodings = []
     for file in os.listdir(f"test/{folder}"):
         path_to_image=f"test/{folder}/{file}"
-        result = iris_model_test("./model.pickle", path_to_image)
+        result = iris_model_test("model.pickle", path_to_image)
         # if result == "unmatch":
         #     # Tentar todas as opções
         #     curr_option_index = 0
