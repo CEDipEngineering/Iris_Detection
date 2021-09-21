@@ -91,6 +91,7 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
         if not processed:
             # print(f"[FAIL] Unable to process {file}")
             log += f"[FAIL] Unable to process {file}\n"
+            return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv}
     print(f"Folder {folder} finished...")
     log += f"Folder {folder} finished...\n"
     if any_successes_in_folder:
@@ -107,12 +108,14 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
     try:
         os.remove(path_to_tmp_file)
     finally:
+        if len(all_encodings[0]) != len(os.listdir(f"train/{folder}")):
+            return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv}
         return {"names":names[0], "all_encodings":all_encodings[0], "log":log, "train_log_csv":train_log_csv}
 
 def main(processes=os.cpu_count(), debug = False):
     names = []
     all_encodings = []
-    cleanup_options = [blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
+    cleanup_options = []#[blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
     try:
         pool = mp.Pool(processes)
         if debug:

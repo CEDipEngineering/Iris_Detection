@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
     # Necessary options. Indicate pickle model location, and add the functions used to train the model to the list below.
     cleanup_options = []#[blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
-    pickle_path = "model_version_0/model_no_mod.pickle"
+    pickle_path = "model.pickle"
 
     print(f"Begining processing")
     start = time.perf_counter()
