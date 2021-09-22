@@ -42,10 +42,10 @@ def generic_cleanup(path_to_image, path_to_save_output):
         return success
 """
 
-def save_model(encodings, names):
+def save_model(encodings, names, functions):
     # encodings = lista de listas de encondings gerados com engroup
     # names = nome referente a cada lista da matriz encodings
-    data = {"encodings": encodings, "names": names}
+    data = {"encodings": encodings, "names": names, "functions": functions}
     with open("model.pickle", "wb") as f:
         f.write(pickle.dumps(data))
 
@@ -55,12 +55,13 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
     all_encodings = []
     log = ""
     train_log_csv = []
-    
+    global SUCCESS_COUNT_THRESHOLD
     ## Processing
-    print(f"----\nStarting directory {folder}\n----\n")
+    print(f"Starting directory {folder}")
     log += f"------------------\nStarting directory {folder}\n------------------\n"
     current_encodings = []
     any_successes_in_folder = False
+    success_count = 0
     for file in os.listdir(f"train/{folder}"):
         processed=False
         ## Tentando imagem original, e se não der, tentar imagem processada
@@ -81,18 +82,19 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
                         # print(f"[SUCCESS] Sucessfully processed {file} with method {option.__name__}")
                         log += f"[SUCCESS] Sucessfully processed {file} with method {option.__name__}\n"
                         any_successes_in_folder = True # Alguma íris dessa pasta deu certo então
+                        success_count += 1
                         current_encodings.append(iris_encodings_in_image)
         else:
             processed = True
             any_successes_in_folder = True # Alguma íris dessa pasta deu certo então
             # print(f"[SUCCESS] Sucessfully processed {file} with standard image")
             log += f"[SUCCESS] Sucessfully processed {file} with standard image\n"
+            success_count += 1
             current_encodings.append(iris_encodings_in_image)                            
         if not processed:
             # print(f"[FAIL] Unable to process {file}")
             log += f"[FAIL] Unable to process {file}\n"
-            return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv}
-    print(f"Folder {folder} finished...")
+    print(f"Directory {folder} finished...")
     log += f"Folder {folder} finished...\n"
     if any_successes_in_folder:
         # print(f"Apending data...\n{len(current_encodings)} encodings extracted from {folder}")
@@ -108,14 +110,14 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
     try:
         os.remove(path_to_tmp_file)
     finally:
-        if len(all_encodings[0]) != len(os.listdir(f"train/{folder}")):
+        ## Only return results if successful detections exceed threshold
+        if len(all_encodings[0]) < SUCCESS_COUNT_THRESHOLD:
             return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv}
         return {"names":names[0], "all_encodings":all_encodings[0], "log":log, "train_log_csv":train_log_csv}
 
-def main(processes=os.cpu_count(), debug = False):
+def main(processes=os.cpu_count(), cleanup_options=[], debug = False):
     names = []
     all_encodings = []
-    cleanup_options = []#[blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
     try:
         pool = mp.Pool(processes)
         if debug:
@@ -138,7 +140,7 @@ def main(processes=os.cpu_count(), debug = False):
             log_csv.write(str(train_log_csv))
         with open("log.txt", "w") as log_txt:
             log_txt.write(log)
-        save_model(all_encodings, names)
+        save_model(all_encodings, names, cleanup_options)
     finally:
         pool.terminate()
         pool.join()
@@ -151,9 +153,16 @@ if __name__ == "__main__":
     ##========bugs.python.org/issue38428===========##
     ##=============================================##
     Path("./model.pickle").touch()
-    print(f"Begining processing")
+
+    # Configure functions for attempted cleanup
+    cleanup_options = []#[blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
+    
+    # Configure amount of successes necessary per folder, in order to register any of them (G6 suggests 5)
+    SUCCESS_COUNT_THRESHOLD = 5
+    
     start = time.perf_counter()
-    main(processes=7)
+    print(f"Begining processing")
+    main(processes=7, cleanup_options=cleanup_options)
     end = time.perf_counter()-start
     print(f"Finished in {end//60} minutes and {end%60} seconds")
 

@@ -4,7 +4,7 @@ import os
 from G6_iris_recognition.feature_vec import engroup
 import multiprocessing as mp
 import time
-from support_functions import *
+import support_functions
 # import tkinter.filedialog as tkfd
 import json
 import pickle
@@ -46,7 +46,7 @@ def process_folder(folder, cleanup_options, path_to_tmp_file, pickle_path):
     finally:
         return {f"{folder}":predictions}
 
-def main(processes=os.cpu_count(), cleanup_options = [], debug = False, pickle_path="model.pickle"):
+def main(processes=os.cpu_count(), debug = False, pickle_path="model.pickle"):
     
     # File dialog for selecting model to test
     # pickle_path = ""
@@ -54,6 +54,15 @@ def main(processes=os.cpu_count(), cleanup_options = [], debug = False, pickle_p
     # while not pickle_path.endswith(".pickle"):
     #     pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
     
+    with open("model_version_0\model.pickle", "rb") as fl:
+        pickle_data = pickle.loads(fl.read())
+    try:
+        cleanup_options = [getattr(support_functions, i) for i in pickle_data["functions"]]
+    except Exception as e:
+        print(f"Something went wrong with loading functions module!\n{e}")
+        cleanup_options = []
+
+
     try:
         pool = mp.Pool(processes)
         if debug:
@@ -94,10 +103,9 @@ if __name__ == "__main__":
     ##=============================================##
 
 
-    # Necessary options. Indicate pickle model location, and add the functions used to train the model to the list below.
-    cleanup_options = []#[blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
+    # Indicate pickle model location.
     pickle_path = "model.pickle"
-
+    
     print(f"Begining processing")
     start = time.perf_counter()
     cleanup_options = []
