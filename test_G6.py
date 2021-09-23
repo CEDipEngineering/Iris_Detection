@@ -5,6 +5,7 @@ from G6_iris_recognition.feature_vec import engroup
 import multiprocessing as mp
 import time
 import support_functions
+from support_functions import cleanup_wrapper
 import tkinter.filedialog as tkfd
 import pickle
 from tkinter import Tk
@@ -54,15 +55,9 @@ def main(processes=os.cpu_count(), debug = False):
     pickle_path = tkfd.askopenfilename(title='Indicate model.pickle location')
     while not pickle_path.endswith(".pickle"):
         pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
-    
     with open(pickle_path, "rb") as fl:
         pickle_data = pickle.loads(fl.read())
-    try:
-        cleanup_options = [getattr(support_functions, i) for i in pickle_data["functions"]]
-    except Exception as e:
-        print(f"Something went wrong with loading functions module!\n{e}")
-        cleanup_options = []
-
+    cleanup_options = pickle_data["functions"]
 
     try:
         pool = mp.Pool(processes)
