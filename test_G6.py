@@ -12,7 +12,7 @@ from tkinter import Tk
 
 def process_folder(folder, cleanup_options, path_to_tmp_file, pickle_path):  
     ## Processing
-    print(f"----\nStarting directory {folder}\n----\n")
+    print(f"Starting directory {folder}")
     predictions = []
     for file in os.listdir(f"test/{folder}"):
         processed=False
@@ -41,7 +41,7 @@ def process_folder(folder, cleanup_options, path_to_tmp_file, pickle_path):
             # print(f"[FAIL] Unable to process {file}")
         # Saves last prediction made. If any prediction wasn't unmatch, saves that, otherwise, saves unmatch
         predictions.append(prediction)
-    print(f"Folder {folder} finished...")
+    print(f"Directory {folder} finished...")
     try:
         os.remove(path_to_tmp_file)
     finally:
@@ -71,7 +71,7 @@ def main(processes=os.cpu_count(), debug = False):
         summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
         data = pickle.loads(open(pickle_path, "rb").read())        
         summary+=f"Known categories: { data['names'] }\n"
-        summary+=f"Cleanup options: { cleanup_options }\n\n"
+        summary+=f"Cleanup options: { [i.__name__ for i in cleanup_options] }\n\n"
         hit, count = 0, 0
         for p in output:
             folder = list(p.keys())[0]

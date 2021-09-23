@@ -93,6 +93,12 @@ def process_folder(folder, cleanup_options, path_to_tmp_file, SUCCESS_COUNT_THRE
         if not processed:
             # print(f"[FAIL] Unable to process {file}")
             log += f"[FAIL] Unable to process {file}\n"
+            # if you need all of them to succeed, any failures mean you can stop training on that folder
+            if SUCCESS_COUNT_THRESHOLD < 0:
+                print(f"Directory {folder} finished...")
+                if (path_to_tmp_file in os.listdir()):
+                    os.remove(path_to_tmp_file)
+                return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv}
     print(f"Directory {folder} finished...")
     log += f"Folder {folder} finished...\n"
     if any_successes_in_folder:
@@ -109,7 +115,11 @@ def process_folder(folder, cleanup_options, path_to_tmp_file, SUCCESS_COUNT_THRE
     try:
         os.remove(path_to_tmp_file)
     finally:
-        ## Only return results if successful detections exceed threshold
+        ## Only return results if successful detections exceed threshold (negative threshold means it must capture all irises on folder)
+        if SUCCESS_COUNT_THRESHOLD < 0:
+            if len(all_encodings[0]) < len(os.listdir(f"train/{folder}")):
+                return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv} 
+            return {"names":names[0], "all_encodings":all_encodings[0], "log":log, "train_log_csv":train_log_csv}
         if len(all_encodings[0]) < SUCCESS_COUNT_THRESHOLD:
             return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv}
         return {"names":names[0], "all_encodings":all_encodings[0], "log":log, "train_log_csv":train_log_csv}
@@ -155,10 +165,10 @@ if __name__ == "__main__":
     Path("./model.pickle").touch()
 
     # Configure functions for attempted cleanup
-    cleanup_options = []#[blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
+    cleanup_options = [blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
     
-    # Configure amount of successes necessary per folder, in order to register any of them (G6 suggests 5)
-    SUCCESS_COUNT_THRESHOLD = 10
+    # Configure amount of successes necessary per folder, in order to register any of them (G6 suggests 5), negative numbers mean it must succeed on all
+    SUCCESS_COUNT_THRESHOLD = -1
     
     start = time.perf_counter()
     print(f"Begining processing")
