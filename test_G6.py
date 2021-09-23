@@ -5,9 +5,9 @@ from G6_iris_recognition.feature_vec import engroup
 import multiprocessing as mp
 import time
 import support_functions
-# import tkinter.filedialog as tkfd
-import json
+import tkinter.filedialog as tkfd
 import pickle
+from tkinter import Tk
 
 def process_folder(folder, cleanup_options, path_to_tmp_file, pickle_path):  
     ## Processing
@@ -46,13 +46,14 @@ def process_folder(folder, cleanup_options, path_to_tmp_file, pickle_path):
     finally:
         return {f"{folder}":predictions}
 
-def main(processes=os.cpu_count(), debug = False, pickle_path="model.pickle"):
+def main(processes=os.cpu_count(), debug = False):
     
     # File dialog for selecting model to test
-    # pickle_path = ""
-    # pickle_path = tkfd.askopenfilename(title='Indicate model.pickle location')
-    # while not pickle_path.endswith(".pickle"):
-    #     pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
+    Tk().withdraw()
+    pickle_path = ""
+    pickle_path = tkfd.askopenfilename(title='Indicate model.pickle location')
+    while not pickle_path.endswith(".pickle"):
+        pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
     
     with open("model_version_0\model.pickle", "rb") as fl:
         pickle_data = pickle.loads(fl.read())
@@ -74,7 +75,8 @@ def main(processes=os.cpu_count(), debug = False, pickle_path="model.pickle"):
 
         summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
         data = pickle.loads(open(pickle_path, "rb").read())        
-        summary+=f"Known categories: { data['names'] }\n\n"
+        summary+=f"Known categories: { data['names'] }\n"
+        summary+=f"Cleanup options: { cleanup_options }\n\n"
         hit, count = 0, 0
         for p in output:
             folder = list(p.keys())[0]
@@ -102,14 +104,9 @@ if __name__ == "__main__":
     ##========bugs.python.org/issue38428===========##
     ##=============================================##
 
-
-    # Indicate pickle model location.
-    pickle_path = "model.pickle"
-    
     print(f"Begining processing")
     start = time.perf_counter()
-    cleanup_options = []
-    main(processes=7, cleanup_options=cleanup_options, pickle_path=pickle_path)
+    main(processes=7)
     end = time.perf_counter()-start
     print(f"Finished in {end//60} minutes and {end%60} seconds")
 

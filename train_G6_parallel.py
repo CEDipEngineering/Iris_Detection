@@ -158,7 +158,7 @@ if __name__ == "__main__":
     cleanup_options = []#[blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
     
     # Configure amount of successes necessary per folder, in order to register any of them (G6 suggests 5)
-    SUCCESS_COUNT_THRESHOLD = 5
+    SUCCESS_COUNT_THRESHOLD = 10
     
     start = time.perf_counter()
     print(f"Begining processing")
