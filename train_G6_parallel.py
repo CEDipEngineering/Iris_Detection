@@ -49,13 +49,12 @@ def save_model(encodings, names, functions):
     with open("model.pickle", "wb") as f:
         f.write(pickle.dumps(data))
 
-def process_folder(folder, cleanup_options, path_to_tmp_file):
+def process_folder(folder, cleanup_options, path_to_tmp_file, SUCCESS_COUNT_THRESHOLD):
     ## Output variables
     names = [""]
     all_encodings = []
     log = ""
     train_log_csv = []
-    global SUCCESS_COUNT_THRESHOLD
     ## Processing
     print(f"Starting directory {folder}")
     log += f"------------------\nStarting directory {folder}\n------------------\n"
@@ -118,12 +117,13 @@ def process_folder(folder, cleanup_options, path_to_tmp_file):
 def main(processes=os.cpu_count(), cleanup_options=[], debug = False):
     names = []
     all_encodings = []
+    global SUCCESS_COUNT_THRESHOLD
     try:
         pool = mp.Pool(processes)
         if debug:
-            multiple_results = [pool.apply_async(process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp")) for i, folder in enumerate(os.listdir("train")[:10])]
+            multiple_results = [pool.apply_async(process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", SUCCESS_COUNT_THRESHOLD)) for i, folder in enumerate(os.listdir("train")[:10])]
         else:
-            multiple_results = [pool.apply_async(process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp")) for i, folder in enumerate(os.listdir("train"))]
+            multiple_results = [pool.apply_async(process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", SUCCESS_COUNT_THRESHOLD)) for i, folder in enumerate(os.listdir("train"))]
         output = [res.get() for res in multiple_results]        
         log = ""
         train_log_csv = []
