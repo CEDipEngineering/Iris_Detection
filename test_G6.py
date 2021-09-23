@@ -55,7 +55,7 @@ def main(processes=os.cpu_count(), debug = False):
     while not pickle_path.endswith(".pickle"):
         pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
     
-    with open("model_version_0\model.pickle", "rb") as fl:
+    with open(pickle_path, "rb") as fl:
         pickle_data = pickle.loads(fl.read())
     try:
         cleanup_options = [getattr(support_functions, i) for i in pickle_data["functions"]]
