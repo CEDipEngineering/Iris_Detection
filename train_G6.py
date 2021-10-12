@@ -173,6 +173,9 @@ class Iris_Trainer():
         pool.close()
         pool.join()
 
+    def update_id(self, id):
+        self.id = id
+
     def get_pickle_fn(self):
         return self.pickle_file
 
