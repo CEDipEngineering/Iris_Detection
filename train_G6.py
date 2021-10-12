@@ -43,17 +43,20 @@ def generic_cleanup(path_to_image, path_to_save_output):
 """
 class Iris_Trainer():
 
-    def __init__(self, processes, sct):
+    def __init__(self, processes, sct, id=None):
         Tk().withdraw()
         self.processes = processes
-        self.origin = ""
         self.origin = tkfd.askdirectory(title='Indicate folder with training data')
         self.SUCCESS_COUNT_THRESHOLD = sct
+        self.id = id
 
     def save_model(self, encodings, names, functions, train_set, train_log_csv, log):
         # encodings = lista de listas de encondings gerados com engroup
         # names = nome referente a cada lista da matriz encodings
-        id = len(os.listdir('results'))//3
+        if self.id is None:
+            id = len(os.listdir('results'))//3
+        else:
+            id = self.id
         data = {"encodings": encodings, "names": names, "functions": functions, "train_set": train_set, "id": id}
         fn_pickle = f"results/model{id}.pickle"
         fn_log = f"results/log{id}.txt"
@@ -64,7 +67,9 @@ class Iris_Trainer():
         with open(fn_log, "w") as log_csv:
             log_csv.write(str(train_log_csv))
         with open(fn_csv, "w") as log_txt:
-            log_txt.write(log)
+            log_txt.write(str(log))
+        self.pickle_file = fn_pickle
+        return fn_pickle
 
     def process_folder(self, folder, cleanup_options, path_to_tmp_file):
         ## Output variables
@@ -168,6 +173,9 @@ class Iris_Trainer():
         pool.close()
         pool.join()
 
+    def get_pickle_fn(self):
+        return self.pickle_file
+
 if __name__ == "__main__":
     ##=============================================##
     ##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
@@ -177,16 +185,15 @@ if __name__ == "__main__":
     ##=============================================##
     
     # Configure functions for attempted cleanup
-    cleanup_options = [blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
+    cleanup_options = [clahe_test, morphClose_cleanup, medianSlide_cleanup, blurMorph_cleanup, CLAHE_cleanup]
     
-    iris_trainer = Iris_Trainer(processes= 7, sct= -1)
-    
-    for i in [[i,e] for i,e in combinations(cleanup_options, 2)]:
-        start = time.perf_counter()
-        print(f"Begining processing")
-        iris_trainer.main(cleanup_options=i)
-        end = time.perf_counter()-start
-        print(f"Finished in {end//60} minutes and {end%60} seconds")
+    iris_trainer = Iris_Trainer(processes= 7, sct= -1, id=42)
+
+    start = time.perf_counter()
+    print(f"Begining processing")
+    iris_trainer.main(cleanup_options=cleanup_options)
+    end = time.perf_counter()-start
+    print(f"Finished in {end//60} minutes and {end%60} seconds")
 
 
 

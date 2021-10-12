@@ -8,63 +8,67 @@ import tkinter.filedialog as tkfd
 import pickle
 from tkinter import Tk
 
-def process_folder(folder, cleanup_options, path_to_tmp_file, pickle_path):  
-    ## Processing
-    print(f"Starting directory {folder}")
-    predictions = []
-    for file in os.listdir(f"test/{folder}"):
-        processed=False
-        ## Tentando imagem original, e se não der, tentar imagem processada
-        path_to_image=f"test/{folder}/{file}"   
-        prediction = iris_model_test(pickle_path, path_to_image)
-        if prediction == "unmatch":
-            # Tentar todas as opções
-            curr_option_index = 0
-            while curr_option_index<len(cleanup_options) and not processed:
-                # Select and advance option
-                option=cleanup_options[curr_option_index]
-                curr_option_index += 1
-                # Try option
-                if cleanup_wrapper(path_to_image, path_to_tmp_file, option):
-                    prediction = iris_model_test(pickle_path, path_to_tmp_file)
-                    if prediction != "unmatch":
-                        processed = True
-                        # print(f"[SUCCESS] Sucessfully processed {file} with method {option.__name__}")
-                         # Alguma íris dessa pasta deu certo então
-        else:
-            processed = True
-             # Alguma íris dessa pasta deu certo então
-            # print(f"[SUCCESS] Sucessfully processed {file} with standard image")                              
-        # if not processed:
-            # print(f"[FAIL] Unable to process {file}")
-        # Saves last prediction made. If any prediction wasn't unmatch, saves that, otherwise, saves unmatch
-        predictions.append(prediction)
-    print(f"Directory {folder} finished...")
-    try:
-        os.remove(path_to_tmp_file)
-    finally:
-        return {f"{folder}":predictions}
+class Iris_Tester():
 
-def main(processes=os.cpu_count(), debug = False):
-    
-    # File dialog for selecting model to test
-    Tk().withdraw()
-    pickle_path = ""
-    pickle_path = tkfd.askopenfilename(title='Indicate model.pickle location')
-    while not pickle_path.endswith(".pickle"):
-        pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
-    with open(pickle_path, "rb") as fl:
-        pickle_data = pickle.loads(fl.read())
-    cleanup_options = pickle_data["functions"]
-    summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
+    def __init__(self, processes=os.cpu_count()):
+        Tk().withdraw()
+        self.processes = processes
 
+    def process_folder(self, folder, cleanup_options, path_to_tmp_file, pickle_path):  
+        ## Processing
+        print(f"Starting directory {folder}")
+        predictions = []
+        for file in os.listdir(f"test/{folder}"):
+            processed=False
+            ## Tentando imagem original, e se não der, tentar imagem processada
+            path_to_image=f"test/{folder}/{file}"   
+            prediction = iris_model_test(pickle_path, path_to_image)
+            if prediction == "unmatch":
+                # Tentar todas as opções
+                curr_option_index = 0
+                while curr_option_index<len(cleanup_options) and not processed:
+                    # Select and advance option
+                    option=cleanup_options[curr_option_index]
+                    curr_option_index += 1
+                    # Try option
+                    if cleanup_wrapper(path_to_image, path_to_tmp_file, option):
+                        prediction = iris_model_test(pickle_path, path_to_tmp_file)
+                        if prediction != "unmatch":
+                            processed = True
+                            # print(f"[SUCCESS] Sucessfully processed {file} with method {option.__name__}")
+                            # Alguma íris dessa pasta deu certo então
+            else:
+                processed = True
+                # Alguma íris dessa pasta deu certo então
+                # print(f"[SUCCESS] Sucessfully processed {file} with standard image")                              
+            # if not processed:
+                # print(f"[FAIL] Unable to process {file}")
+            # Saves last prediction made. If any prediction wasn't unmatch, saves that, otherwise, saves unmatch
+            predictions.append(prediction)
+        print(f"Directory {folder} finished...")
+        try:
+            os.remove(path_to_tmp_file)
+        finally:
+            return {f"{folder}":predictions}
 
-    try:
-        pool = mp.Pool(processes)
+    def main(self, pickle_path = None, debug = False):
+        
+        # File dialog for selecting model to test
+        Tk().withdraw()
+        if pickle_path is None:
+            pickle_path = tkfd.askopenfilename(title='Indicate model.pickle location')
+            while not pickle_path.endswith(".pickle"):
+                pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
+        with open(pickle_path, "rb") as fl:
+            pickle_data = pickle.loads(fl.read())
+        cleanup_options = pickle_data["functions"]
+        summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
+
+        pool = mp.Pool(self.processes)
         if debug:
-            multiple_results = [pool.apply_async(process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test")[:10])]
+            multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test")[:10])]
         else:
-            multiple_results = [pool.apply_async(process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test"))]
+            multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test"))]
         output = [res.get() for res in multiple_results]        
 
 
@@ -89,9 +93,6 @@ def main(processes=os.cpu_count(), debug = False):
             fn = f"results/test_result.txt"
         with open(fn,"w") as f:
             f.write(summary)
-        
-
-    finally:
         pool.close()
         pool.join()
 
@@ -103,9 +104,11 @@ if __name__ == "__main__":
     ##========bugs.python.org/issue38428===========##
     ##=============================================##
 
+    iris_tester = Iris_Tester(processes=7)
+
     print(f"Begining processing")
     start = time.perf_counter()
-    main(processes=7)
+    iris_tester.main()
     end = time.perf_counter()-start
     print(f"Finished in {end//60} minutes and {end%60} seconds")
 
