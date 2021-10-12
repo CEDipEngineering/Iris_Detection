@@ -58,6 +58,8 @@ def main(processes=os.cpu_count(), debug = False):
     with open(pickle_path, "rb") as fl:
         pickle_data = pickle.loads(fl.read())
     cleanup_options = pickle_data["functions"]
+    summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
+
 
     try:
         pool = mp.Pool(processes)
@@ -68,10 +70,10 @@ def main(processes=os.cpu_count(), debug = False):
         output = [res.get() for res in multiple_results]        
 
 
-        summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
         data = pickle.loads(open(pickle_path, "rb").read())        
         summary+=f"Known categories: { data['names'] }\n"
-        summary+=f"Cleanup options: { [i.__name__ for i in cleanup_options] }\n\n"
+        summary+=f"Cleanup options: { [i.__name__ for i in cleanup_options] }\n"
+        summary+=f"Training data set: { data['train_set'] }\n\n"
         hit, count = 0, 0
         for p in output:
             folder = list(p.keys())[0]
