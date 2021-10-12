@@ -50,11 +50,11 @@ class Iris_Trainer():
         self.origin = tkfd.askdirectory(title='Indicate folder with training data')
         self.SUCCESS_COUNT_THRESHOLD = sct
 
-    def save_model(self, encodings, names, functions, train_set, log, train_log_csv):
+    def save_model(self, encodings, names, functions, train_set, train_log_csv, log):
         # encodings = lista de listas de encondings gerados com engroup
         # names = nome referente a cada lista da matriz encodings
-        data = {"encodings": encodings, "names": names, "functions": functions, "train_set": train_set}
-        id = len(os.listdir('results'))
+        id = len(os.listdir('results'))//3
+        data = {"encodings": encodings, "names": names, "functions": functions, "train_set": train_set, "id": id}
         fn_pickle = f"results/model{id}.pickle"
         fn_log = f"results/log{id}.txt"
         fn_csv = f"results/log{id}.csv"
@@ -168,14 +168,6 @@ class Iris_Trainer():
         pool.close()
         pool.join()
 
-    # def __getstate__(self):
-    #     self_dict = self.__dict__.copy()
-    #     del self_dict['pool']
-    #     return self_dict
-
-    # def __setstate__(self, state):
-    #     self.__dict__.update(state)
-
 if __name__ == "__main__":
     ##=============================================##
     ##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
@@ -186,9 +178,6 @@ if __name__ == "__main__":
     
     # Configure functions for attempted cleanup
     cleanup_options = [blurMorph_cleanup, morphClose_cleanup, CLAHE_cleanup, medianSlide_cleanup]
-    
-    # Configure amount of successes necessary per folder, in order to register any of them (G6 suggests 5), negative numbers mean it must succeed on all
-    SUCCESS_COUNT_THRESHOLD = -1
     
     iris_trainer = Iris_Trainer(processes= 7, sct= -1)
     

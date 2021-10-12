@@ -3,7 +3,9 @@ processedTest
 processedTraining
 test
 train
+trainSmall
 subset
+results/*
 *.bmp
 .ipynb_checkpoints
 __pycache__

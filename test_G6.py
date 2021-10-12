@@ -1,10 +1,8 @@
 from G6_iris_recognition import iris_model_test
-from pathlib import Path
 import os
 from G6_iris_recognition.feature_vec import engroup
 import multiprocessing as mp
 import time
-import support_functions
 from support_functions import cleanup_wrapper
 import tkinter.filedialog as tkfd
 import pickle
@@ -85,12 +83,16 @@ def main(processes=os.cpu_count(), debug = False):
             summary+=f"{folder}: {values}\n"
         summary += f"Hits: {hit}/{count}, Misses: {count-hit}/{count}, Score: {(hit/count):.03f}\n"
 
-        with open("test_result.txt","w") as f:
+        if "id" in data.keys():
+            fn = f"results/test_result{data['id']}.txt"
+        else:
+            fn = f"results/test_result.txt"
+        with open(fn,"w") as f:
             f.write(summary)
         
 
     finally:
-        pool.terminate()
+        pool.close()
         pool.join()
 
 if __name__ == "__main__":
