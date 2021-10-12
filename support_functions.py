@@ -86,3 +86,22 @@ def morphClose_cleanup(path_to_image, path_to_save_output, kernel = np.ones((5,5
     finally:
         # Return state
         return success
+
+def clahe_test(path_to_image, path_to_save_output, kernel = np.ones((5,5),np.uint8)):
+    success = True
+    try:
+        # Read
+        img = cv.imread(path_to_image, cv.IMREAD_GRAYSCALE)
+        # Transform
+        clahe = cv.createCLAHE(clipLimit = 2, tileGridSize= (5,5))
+        processed_img = clahe.apply(img)
+        closing = cv.morphologyEx(processed_img, cv.MORPH_CLOSE, kernel)
+        # Write
+        cv.imwrite(path_to_save_output, closing)
+    except:
+        # Handle failure
+        print(f"ERROR")
+        success=False
+    finally:
+        # Return state
+        return success
