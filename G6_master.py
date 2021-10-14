@@ -37,25 +37,9 @@ if __name__ == "__main__":
     ##========bugs.python.org/issue38428===========##
     ##=============================================##
 
-    # All functions available:
-    # [CLAHE_cleanup, 
-    #  blurMorph_cleanup, 
-    #  medianSlide_cleanup, 
-    #  morph_close, 
-    #  clahe_test, 
-    #  detail_enhance, 
-    #  erosion, 
-    #  morph_open, 
-    #  morph_hit_miss, 
-    #  median_blur, 
-    #  gaussian_blur, 
-    #  bilateral_filter, 
-    #  erode_dilatate, 
-    #  wavelet_morph_open]
-
 
     # Configure functions for attempted cleanup
-    cleanup_options = [morph_close, blurMorph_cleanup]
+    cleanup_options = [[blurMorph_cleanup,CLAHE_cleanup, medianSlide_cleanup, morph_close, clahe_test, detail_enhance, erosion, morph_open, morph_hit_miss, median_blur, gaussian_blur, bilateral_filter, erode_dilatate, wavelet_morph_open]]
     
     # Number of processes the program is allowed to spawn
     process_limit = 7
@@ -69,7 +53,7 @@ if __name__ == "__main__":
     for i, e in enumerate(cleanup_options):
         start = time.perf_counter()
         iris_trainer.update_id(id = sum([1 for i in os.listdir("results") if i.endswith(".pickle")]))
-        main([e], iris_trainer, iris_tester)
+        main(e, iris_trainer, iris_tester)
         end = time.perf_counter()-start
         print(f"Time for experiment {i} was {end//60} minutes and {end%60} seconds.")
     end_all = time.perf_counter()-start_all
