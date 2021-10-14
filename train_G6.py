@@ -131,28 +131,29 @@ class Iris_Trainer():
         names = []
         all_encodings = []
 
-        pool = mp.Pool(self.processes)
-
-        if debug:
-            multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp")) for i, folder in enumerate(os.listdir(self.origin)[:10])]
-        else:
-            multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp")) for i, folder in enumerate(os.listdir(self.origin))]
-        output = [res.get() for res in multiple_results]        
-        log = ""
-        train_log_csv = []
-        for person in output:
-            this_name = person["names"]
-            these_encodings = person["all_encodings"]
-            log += person["log"]
-            train_log_csv += person["train_log_csv"]
-            
-            if len(these_encodings) != 0:
-                all_encodings.append(these_encodings)
-                names.append(this_name)
-        self.save_model(all_encodings, names, cleanup_options, self.origin, log, train_log_csv)
-
-        pool.close()
-        pool.join()
+        try:
+            pool = mp.Pool(self.processes)
+            if debug:
+                multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp")) for i, folder in enumerate(os.listdir(self.origin)[:10])]
+            else:
+                multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp")) for i, folder in enumerate(os.listdir(self.origin))]
+            output = [res.get() for res in multiple_results]        
+            log = ""
+            train_log_csv = []
+            for person in output:
+                this_name = person["names"]
+                these_encodings = person["all_encodings"]
+                log += person["log"]
+                train_log_csv += person["train_log_csv"]
+                
+                if len(these_encodings) != 0:
+                    all_encodings.append(these_encodings)
+                    names.append(this_name)
+            self.save_model(all_encodings, names, cleanup_options, self.origin, log, train_log_csv)
+        except Exception as e:
+            print(f"Exception encountered during training: {e}")
+            pool.close()
+            pool.join()
 
     # Changes ID used to identify output files
     def update_id(self, id):

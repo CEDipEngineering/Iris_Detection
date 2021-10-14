@@ -55,48 +55,51 @@ class Iris_Tester():
     # Spawns multiprocessing pool and jobs, then gets and saves resulting logs.
     def main(self, pickle_path = None, debug = False):
         
-        # File dialog for selecting model to test
-        Tk().withdraw()
-        if pickle_path is None:
-            pickle_path = tkfd.askopenfilename(title='Indicate model.pickle location')
-            while not pickle_path.endswith(".pickle"):
-                pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
-        with open(pickle_path, "rb") as fl:
-            pickle_data = pickle.loads(fl.read())
-        cleanup_options = pickle_data["functions"]
-        summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
+        try:
+            # File dialog for selecting model to test
+            Tk().withdraw()
+            if pickle_path is None:
+                pickle_path = tkfd.askopenfilename(title='Indicate model.pickle location')
+                while not pickle_path.endswith(".pickle"):
+                    pickle_path = tkfd.askopenfilename(title='INVALID: Indicate model.pickle location')
+            with open(pickle_path, "rb") as fl:
+                pickle_data = pickle.loads(fl.read())
+            cleanup_options = pickle_data["functions"]
+            summary=f"{'='*8}\n SUMMARY \n{'='*8}\n"
 
-        pool = mp.Pool(self.processes)
-        if debug:
-            multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test")[:10])]
-        else:
-            multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test"))]
-        output = [res.get() for res in multiple_results]        
+            pool = mp.Pool(self.processes)
+            if debug:
+                multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test")[:10])]
+            else:
+                multiple_results = [pool.apply_async(self.process_folder, (folder, cleanup_options, f"tmp_img{i}.bmp", pickle_path)) for i, folder in enumerate(os.listdir("test"))]
+            output = [res.get() for res in multiple_results]        
 
 
-        data = pickle.loads(open(pickle_path, "rb").read())        
-        summary+=f"Known categories: { data['names'] }\n"
-        summary+=f"Cleanup options: { [i.__name__ for i in cleanup_options] }\n"
-        summary+=f"Training data set: { data['train_set'] }\n\n"
-        hit, count = 0, 0
-        for p in output:
-            folder = list(p.keys())[0]
-            values = list(p.values())[0]
-            for v in values:
-                if v == folder:
-                    hit += 1
-                count += 1
-            summary+=f"{folder}: {values}\n"
-        summary += f"Hits: {hit}/{count}, Misses: {count-hit}/{count}, Score: {(hit/count):.03f}\n"
+            data = pickle.loads(open(pickle_path, "rb").read())        
+            summary+=f"Known categories: { data['names'] }\n"
+            summary+=f"Cleanup options: { [i.__name__ for i in cleanup_options] }\n"
+            summary+=f"Training data set: { data['train_set'] }\n\n"
+            hit, count = 0, 0
+            for p in output:
+                folder = list(p.keys())[0]
+                values = list(p.values())[0]
+                for v in values:
+                    if v == folder:
+                        hit += 1
+                    count += 1
+                summary+=f"{folder}: {values}\n"
+            summary += f"Hits: {hit}/{count}, Misses: {count-hit}/{count}, Score: {(hit/count):.03f}\n"
 
-        if "id" in data.keys():
-            fn = f"results/test_result{data['id']}.txt"
-        else:
-            fn = f"results/test_result.txt"
-        with open(fn,"w") as f:
-            f.write(summary)
-        pool.close()
-        pool.join()
+            if "id" in data.keys():
+                fn = f"results/test_result{data['id']}.txt"
+            else:
+                fn = f"results/test_result.txt"
+            with open(fn,"w") as f:
+                f.write(summary)
+        except Exception as e:
+            print(f"Exception encountered during training: {e}")
+            pool.close()
+            pool.join()
 
 if __name__ == "__main__":
     ##=============================================##
