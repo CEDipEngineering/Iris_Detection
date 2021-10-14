@@ -11,36 +11,14 @@ from support_functions import *
 from itertools import combinations
 
 ## O treinamento foi feito usando o método engroup do G6, e não o iris_model_train, como sugerido.
-## As imagens são ampliadas usando o modelo FSRCNN-small_x3, que é uma rede Neural de Upscaling do OpenCV
 
+##=============================================##
+##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
+##=======THIS WILL CRASH YOUR TERMINAL=========##
+##=======IT IS A KNOWN BUG IN mp.Pool==========##
+##========bugs.python.org/issue38428===========##
+##=============================================##
 
-    ##=============================================##
-    ##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
-    ##=======THIS WILL CRASH YOUR TERMINAL=========##
-    ##=======IT IS A KNOWN BUG IN mp.Pool==========##
-    ##========bugs.python.org/issue38428===========##
-    ##=============================================##
-
-
-"""
-# Template for adding new cleanup methods.
-def generic_cleanup(path_to_image, path_to_save_output):
-    success = True
-    try:
-        # Read
-        img = cv.imread(path_to_image, cv.IMREAD_GRAYSCALE)
-        # Transform
-        processed_img = img.copy() # Example, useless
-        # Write
-        cv.imwrite(path_to_save_output, processed_img)
-    except:
-        # Handle failure
-        print(f"ERROR")
-        success=False
-    finally:
-        # Return state
-        return success
-"""
 class Iris_Trainer():
 
     def __init__(self, processes, sct, id=None):
@@ -50,6 +28,7 @@ class Iris_Trainer():
         self.SUCCESS_COUNT_THRESHOLD = sct
         self.id = id
 
+    # Saves trained model to .pickle, as well as training logs
     def save_model(self, encodings, names, functions, train_set, train_log_csv, log):
         # encodings = lista de listas de encondings gerados com engroup
         # names = nome referente a cada lista da matriz encodings
@@ -71,6 +50,7 @@ class Iris_Trainer():
         self.pickle_file = fn_pickle
         return fn_pickle
 
+    # Function used for multiprocessing, processes given folder.
     def process_folder(self, folder, cleanup_options, path_to_tmp_file):
         ## Output variables
         names = [""]
@@ -146,6 +126,7 @@ class Iris_Trainer():
                 return {"names":[], "all_encodings":[], "log":log, "train_log_csv":train_log_csv}
             return {"names":names[0], "all_encodings":all_encodings[0], "log":log, "train_log_csv":train_log_csv}
 
+    # Spawns multiprocessing pool and jobs, then gets results.
     def main(self, cleanup_options=[], debug = False):
         names = []
         all_encodings = []
@@ -173,9 +154,11 @@ class Iris_Trainer():
         pool.close()
         pool.join()
 
+    # Changes ID used to identify output files
     def update_id(self, id):
         self.id = id
 
+    # Outputs current produced pickle file
     def get_pickle_fn(self):
         return self.pickle_file
 
@@ -197,18 +180,6 @@ if __name__ == "__main__":
     iris_trainer.main(cleanup_options=cleanup_options)
     end = time.perf_counter()-start
     print(f"Finished in {end//60} minutes and {end%60} seconds")
-
-
-
-"""
-Sharpening
-Filtro de Freq (Fourier)
-Upscaling
-Função de Teste pra testar score
-ROI não ajuda
-Adicionar comentários explicando que estamos usando o engroup e não o model_train do G6
-"""
-
 
 
 

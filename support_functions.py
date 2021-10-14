@@ -252,6 +252,7 @@ def erode_dilatate(path_to_image, path_to_save_output, kernel = np.ones((5,5),np
     finally:
         # Return state
         return success
+        
 def wavelet_morph_open(path_to_image, path_to_save_output, kernel = np.ones((5,5),np.uint8)):
     success = True
     try:

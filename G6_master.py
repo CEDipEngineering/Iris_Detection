@@ -12,6 +12,8 @@ def main(cleanup_options, trainer, tester):
     ##========bugs.python.org/issue38428===========##
     ##=============================================##
 
+    # This function imports the training and test modules, and then applies them sequentially.
+
     # Training
     start = time.perf_counter()
     print(f"Begining training")
@@ -27,6 +29,7 @@ def main(cleanup_options, trainer, tester):
     print(f"Finished in {end//60} minutes and {end%60} seconds")
 
 if __name__ == "__main__":
+    
     ##=============================================##
     ##=====DO NOT USE CTRL+C TO STOP PROCESS=======##
     ##=======THIS WILL CRASH YOUR TERMINAL=========##
@@ -34,9 +37,26 @@ if __name__ == "__main__":
     ##========bugs.python.org/issue38428===========##
     ##=============================================##
 
+    # All functions available:
+    # [CLAHE_cleanup, 
+    #  blurMorph_cleanup, 
+    #  medianSlide_cleanup, 
+    #  morph_close, 
+    #  clahe_test, 
+    #  detail_enhance, 
+    #  erosion, 
+    #  morph_open, 
+    #  morph_hit_miss, 
+    #  median_blur, 
+    #  gaussian_blur, 
+    #  bilateral_filter, 
+    #  erode_dilatate, 
+    #  wavelet_morph_open]
+
 
     # Configure functions for attempted cleanup
-    cleanup_options = [clahe_test, morphClose_cleanup, medianSlide_cleanup, blurMorph_cleanup, CLAHE_cleanup]
+    cleanup_options = [morph_close, blurMorph_cleanup]
+    
     # Number of processes the program is allowed to spawn
     process_limit = 7
     # Determine id for the experiment

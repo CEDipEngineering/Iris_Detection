@@ -14,6 +14,7 @@ class Iris_Tester():
         Tk().withdraw()
         self.processes = processes
 
+    # Function used for multiprocessing, processes given folder.
     def process_folder(self, folder, cleanup_options, path_to_tmp_file, pickle_path):  
         ## Processing
         print(f"Starting directory {folder}")
@@ -51,6 +52,7 @@ class Iris_Tester():
         finally:
             return {f"{folder}":predictions}
 
+    # Spawns multiprocessing pool and jobs, then gets and saves resulting logs.
     def main(self, pickle_path = None, debug = False):
         
         # File dialog for selecting model to test

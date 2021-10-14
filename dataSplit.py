@@ -3,6 +3,12 @@ from sklearn.model_selection import train_test_split
 from shutil import copy, copyfile, rmtree
 import cv2 as cv
 
+"""
+Código usado para separar imagens de treino/teste.
+SEED de números aleatórios confugurada para reproducibilidade.
+Imagens originais disponíveis em: https://github.com/lucianosilva-github/images
+"""
+
 RANDOM_SEED = 42
 
 folders_main = os.listdir("original")
