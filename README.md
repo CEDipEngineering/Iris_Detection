@@ -9,6 +9,9 @@ ___
 ### Project specs
 
 For this project we had to use the provided images and G6 version. The goal was to achieve the highest score possible upon testing.
+Versions used:
+Numpy 1.20.2
+Cv2 4.5.2
 
 ### Files
 
