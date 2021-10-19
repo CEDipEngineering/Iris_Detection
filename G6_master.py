@@ -39,7 +39,7 @@ if __name__ == "__main__":
 
 
     # Configure functions for attempted cleanup
-    cleanup_options = [[blurMorph_cleanup,CLAHE_cleanup, medianSlide_cleanup, morph_close, clahe_test, detail_enhance, erosion, morph_open, morph_hit_miss, median_blur, gaussian_blur, bilateral_filter, erode_dilatate, wavelet_morph_open]]
+    cleanup_options = [[gabor], [gabor_morph]]
     
     # Number of processes the program is allowed to spawn
     process_limit = 7
@@ -52,9 +52,9 @@ if __name__ == "__main__":
     start_all = time.perf_counter()
     for i, e in enumerate(cleanup_options):
         start = time.perf_counter()
-        iris_trainer.update_id(id = sum([1 for i in os.listdir("results") if i.endswith(".pickle")]))
         main(e, iris_trainer, iris_tester)
         end = time.perf_counter()-start
         print(f"Time for experiment {i} was {end//60} minutes and {end%60} seconds.")
+        iris_trainer.update_id(id = sum([1 for i in os.listdir("results") if i.endswith(".pickle")]))
     end_all = time.perf_counter()-start_all
     print(f"Total time for {i+1} experiments was {end_all//60} minutes and {end_all%60} seconds.")

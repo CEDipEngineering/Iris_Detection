@@ -1,6 +1,7 @@
 import numpy as np
 import cv2 as cv
 import pywt
+from multiprocessing.pool import ThreadPool
 
 
 
@@ -279,4 +280,58 @@ def wavelet_morph_open(path_to_image, path_to_save_output, kernel = np.ones((5,5
         return success
 
 
+def gabor_morph(path_to_image, path_to_save_output, kernel = np.ones((5,5),np.uint8)):
+    success = True
+    try:
+        # Read
+        filters = _build_filters()
 
+        morph_close(path_to_image, path_to_save_output) # tira cílios
+        img = cv.imread(path_to_save_output) 
+        res2 = _process_threaded(img, filters) # gabor
+        
+        # Write
+        cv.imwrite(path_to_save_output, res2)
+    except Exception as e:
+        # Handle failure
+        print(f"ERROR {e}")
+        success=False
+    finally:
+        # Return state
+        return success
+
+def gabor(path_to_image, path_to_save_output, kernel = np.ones((5,5),np.uint8)):
+    success = True
+    try:
+        # Read
+        img = cv.imread(path_to_image) 
+        filters = _build_filters()
+        res2 = _process_threaded(img, filters) # gabor
+        
+        # Write
+        cv.imwrite(path_to_save_output, res2)
+    except Exception as e:
+        # Handle failure
+        print(f"ERROR {e}")
+        success=False
+    finally:
+        # Return state
+        return success
+
+def _build_filters():
+    filters = []
+    ksize = 31
+    for theta in np.arange(0, np.pi, np.pi / 16):
+        kern = cv.getGaborKernel((ksize, ksize), 4.0, theta, 10.0, 0.5, 0, ktype=cv.CV_32F)
+        kern /= 1.5*kern.sum()
+        filters.append(kern)
+    return filters
+
+def _process_threaded(img, filters, threadn = 8):
+    accum = np.zeros_like(img)
+    def f(kern):
+        return cv.filter2D(img, cv.CV_8UC3, kern)
+    pool = ThreadPool(processes=threadn)
+    for fimg in pool.imap_unordered(f, filters):
+        np.maximum(accum, fimg, accum)
+    return accum
